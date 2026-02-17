@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen Marketing | 次世代のWeb戦略パートナー</title>
+    <meta name="description" content="Web制作、SEO対策、デジタル広告運用まで、企業のデジタル課題を解決し、売上拡大を実現するWebマーケティング支援会社です。">
+
+    <!-- Google Fonts: Modern & Trustworthy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        en: ['"Roboto"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A', // Slate 900 (Main)
+                            primary: '#1E293B', // Slate 800
+                            accent: '#3B82F6', // Blue 500 (Action)
+                            light: '#F8FAFC', // Slate 50 (Bg)
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-light text-slate-700 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="font-en font-bold text-2xl text-brand-dark flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-brand-accent"></i> NexGen Marketing
+            </a>
+            <div class="hidden md:flex gap-8 font-medium text-slate-600 text-sm">
+                <a href="#services" class="hover:text-brand-accent transition-colors">サービス</a>
+                <a href="#works" class="hover:text-brand-accent transition-colors">制作実績</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors">会社概要</a>
+                <a href="#contact" class="bg-brand-accent hover:bg-blue-600 text-white px-6 py-2 rounded-full font-bold transition-all shadow-md transform hover:-translate-y-0.5">
+                    無料相談 <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+            <!-- Mobile Menu Button (Placeholder) -->
+            <button class="md:hidden text-brand-dark text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="./images/hero.jpg" alt="Modern Office" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand-dark/40"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-white" data-aos="fade-up" data-aos-duration="1000">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-brand-accent/20 border border-brand-accent/50 text-blue-200 px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide">
+                    DIGITAL STRATEGY PARTNER
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">
+                    デジタルで、<br>
+                    ビジネスの<span class="text-brand-accent">可能性</span>を拓く。
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    Web制作からマーケティング、データ分析まで一気通貫。<br>
+                    「ただ作るだけ」ではない、成果にコミットする戦略的パートナーです。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent hover:bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg text-center">
+                        無料相談を申し込む
+                    </a>
+                    <a href="#works" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-md font-bold text-lg transition-all backdrop-blur-sm text-center">
+                        制作実績を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50 text-2xl">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-en text-brand-accent font-bold tracking-widest text-sm uppercase mb-2">OUR SERVICES</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">ビジネスを加速させる3つの柱</h3>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-brand-light rounded-xl p-8 border border-slate-100 shadow-soft hover:shadow-hover transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-brand-accent text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-4">Webサイト制作</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        デザインの美しさだけでなく、SEO内部対策やコンバージョン導線を設計。モバイルファーストで、どのデバイスでも最適な体験を提供します。
+                    </p>
+                    <img src="./images/web_design.jpg" alt="Web Design" class="w-full h-48 object-cover rounded-lg opacity-90 group-hover:opacity-100 transition-opacity">
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-light rounded-xl p-8 border border-slate-100 shadow-soft hover:shadow-hover transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-500 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-4">Webマーケティング</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Google広告、SNS運用、コンテンツマーケティングなど、貴社のターゲットに合わせた最適な集客チャネルを選定・運用します。
+                    </p>
+                    <img src="./images/marketing.jpg" alt="Marketing" class="w-full h-48 object-cover rounded-lg opacity-90 group-hover:opacity-100 transition-opacity">
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-light rounded-xl p-8 border border-slate-100 shadow-soft hover:shadow-hover transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-500 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-4">コンサルティング</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        現状の課題を分析し、KGI/KPIの設定から具体的なアクションプランまで策定。定期的なミーティングで伴走支援します。
+                    </p>
+                    <img src="./images/consulting.jpg" alt="Consulting" class="w-full h-48 object-cover rounded-lg opacity-90 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section (Portfolio Link) -->
+    <section id="works" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div data-aos="fade-right">
+                    <h2 class="font-en text-brand-accent font-bold tracking-widest text-sm uppercase mb-2">OUR WORKS</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold">制作・支援実績</h3>
+                </div>
+                <div data-aos="fade-left">
+                    <p class="text-slate-400 mt-4 md:mt-0">多様な業種・目的に合わせたWebサイト構築実績があります。</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Portfolio 1: Italian Restaurant -->
+                <a href="https://italian-restaurant-lphato.vercel.app/" target="_blank" class="group relative block overflow-hidden rounded-xl shadow-2xl border border-white/10" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 transition-opacity opacity-80 group-hover:opacity-60"></div>
+                    <!-- Placeholder image if screenshots are not available, using gradient for now or external link -->
+                    <div class="w-full h-80 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+                        <span class="inline-block bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-full mb-3">飲食店 / LP</span>
+                        <h4 class="text-2xl font-bold mb-2 group-hover:text-brand-accent transition-colors">本格イタリアン「Trattoria Sole」</h4>
+                        <p class="text-slate-300 text-sm line-clamp-2 mb-4">
+                            「シズル感」と「高級感」を重視したブランディングサイト。パララックス効果やアニメーションで没入感を演出し、予約率向上に貢献。
+                        </p>
+                        <span class="text-brand-accent font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                            サイトを見る <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Portfolio 2: Pigeon LP -->
+                <a href="https://my-lp-site-sslw.vercel.app/" target="_blank" class="group relative block overflow-hidden rounded-xl shadow-2xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 transition-opacity opacity-80 group-hover:opacity-60"></div>
+                    <div class="w-full h-80 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1544604866-9b09d06b649d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+                        <span class="inline-block bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">ポートフォリオ / LP</span>
+                        <h4 class="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">鳩専門サイト「Peaceful Pigeon」</h4>
+                        <p class="text-slate-300 text-sm line-clamp-2 mb-4">
+                            「鳩の魅力」をユニークに伝えるコンセプトサイト。Tailwind CSSを活用したモダンなデザインと、遊び心のあるコンテンツ構成。
+                        </p>
+                        <span class="text-emerald-400 font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                            サイトを見る <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                 <p class="text-slate-400 text-sm">※ 掲載されている実績はポートフォリオ用のデモサイトです。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info -->
+    <section id="about" class="py-24 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 relative min-h-[400px]">
+                    <img src="./images/team.jpg" alt="Team" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                    <h2 class="font-en text-brand-accent font-bold tracking-widest text-sm uppercase mb-2">WHO WE ARE</h2>
+                    <h3 class="text-3xl font-bold text-brand-dark mb-6">クライアントと共に走る<br>パートナーでありたい。</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        私たちNexGen Marketingは、単なる制作会社ではありません。<br>
+                        お客様のビジネスゴールを共有し、デジタル技術を駆使してその達成を支援する「戦略パートナー」です。
+                    </p>
+                    <table class="w-full text-left text-sm">
+                        <tr class="border-b border-slate-100">
+                            <th class="py-4 font-bold text-brand-dark w-32">会社名</th>
+                            <td class="py-4 text-slate-600">株式会社NexGen Marketing</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-4 font-bold text-brand-dark">設立</th>
+                            <td class="py-4 text-slate-600">2026年1月</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-4 font-bold text-brand-dark">事業内容</th>
+                            <td class="py-4 text-slate-600">Webサイト制作、Webマーケティング支援、コンサルティング</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-en text-brand-accent font-bold tracking-widest text-sm uppercase mb-2">CONTACT US</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">お問い合わせ</h3>
+                <p class="text-slate-600 mt-4">
+                    Web制作やマーケティングに関するご相談は、<br class="md:hidden">お気軽にお問い合わせください。
+                </p>
+            </div>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('お問い合わせありがとうございます。
+（これはデモフォームです）');">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-brand-dark mb-2">会社名</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-brand-light border border-slate-200 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-blue-100 transition-all" placeholder="株式会社〇〇">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-brand-dark mb-2">お名前 <span class="text-red-500">*</span></label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg bg-brand-light border border-slate-200 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-blue-100 transition-all" placeholder="山田 太郎">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-brand-dark mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-lg bg-brand-light border border-slate-200 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-blue-100 transition-all" placeholder="example@nexgen.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-brand-dark mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                    <textarea required rows="5" class="w-full px-4 py-3 rounded-lg bg-brand-light border border-slate-200 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-blue-100 transition-all" placeholder="Webサイトのリニューアルを検討しています..."></textarea>
+                </div>
+                <div class="text-center mt-8">
+                    <button type="submit" class="bg-brand-accent hover:bg-blue-600 text-white px-12 py-4 rounded-full font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1 w-full md:w-auto">
+                        送信する <i class="fa-regular fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="font-en font-bold text-xl text-white flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-brand-accent"></i> NexGen Marketing
+                    </a>
+                    <p class="text-xs mt-2">東京都渋谷区神宮前 1-2-3</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition-colors">利用規約</a>
+                    <a href="#" class="hover:text-white transition-colors">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-xs">
+                &copy; 2026 NexGen Marketing Inc. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+</body>
+</html>
